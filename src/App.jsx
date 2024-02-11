@@ -107,20 +107,20 @@ function App() {
       <div className="mt-[50px] h-[700px] md:h-[600px] px-[20px] min-h-[400px] flex flex-col gap-[50px] md:flex-row md:items-center justify-center">
         <div className="w-[100%] [&>h1]:text-2xl lg:[&>h1]:text-5xl lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>Skills in my arsenal</h1>
-          <div className="mt-[40px] p-[10px] flex gap-[25px] lg:gap-[40px] ">
-            <div className="flex flex-col items-center text-sm lg:text-xl text-green-600">
+          <div className="mt-[40px] p-[10px] flex gap-[20px] lg:gap-[40px] ">
+            <div className="flex flex-col items-center text-xs lg:text-xl text-green-600">
               <DiMongodb className="text-[20px] lg:text-[40px]" />
               <span>Mongo DB</span>
             </div>
-            <div className="flex flex-col items-center text-sm lg:text-xl text-orange-700">
+            <div className="flex flex-col items-center text-xs lg:text-xl text-orange-700">
               <SiExpress className="text-[20px] lg:text-[40px]" />
               <span>Express Js</span>
             </div>
-            <div className="flex flex-col items-center text-sm lg:text-xl text-blue-400">
+            <div className="flex flex-col items-center text-xs lg:text-xl text-blue-400">
               <FaReact className="text-[20px] lg:text-[40px]" />
               <span>React Js</span>
             </div>
-            <div className="flex flex-col items-center text-sm lg:text-xl text-green-400">
+            <div className="flex flex-col items-center text-xs lg:text-xl text-green-400">
               <FaNodeJs className="text-[20px] lg:text-[40px]" />
               <span>Node Js</span>
             </div>
@@ -236,13 +236,62 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="max-h-[300px] max-w-[500px]">
+          <div className="max-h-[300px] max-w-[500px] mx-auto">
             <img
               src="/jobify1.png"
               alt=""
               className="w-[100%] h-[100%] object-contain shadow-md"
             />
           </div>
+        </div>
+        <div className="mt-[50px] md:w-[80%] mx-auto flex flex-col-reverse md:flex-row md:gap-[20px] md:justify-around">
+          <div className="mt-[30px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+            <h1 className="">GenZ</h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+              nostrum nobis architecto tempora eveniet explicabo qui, dicta quas
+              non veniam aspernatur laudantium minus provident distinctio.
+            </p>
+            <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
+              <button className="bgColor">Get in touch </button>
+              <button className="border-black border-[2px] ">
+                view all work
+              </button>
+            </div>
+          </div>
+          <div className="max-h-[300px] max-w-[500px] mx-auto">
+            <img
+              src="/genz.png"
+              alt=""
+              className="w-[100%] h-[100%] object-contain shadow-md"
+            />
+          </div>
+        </div>
+        <div className="mt-[50px] md:w-[80%] mx-auto flex flex-col-reverse md:flex-row md:gap-[20px] md:justify-around">
+          <div className="mt-[30px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+            <h1 className="">CaffeZilla</h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+              nostrum nobis architecto tempora eveniet explicabo qui, dicta quas
+              non veniam aspernatur laudantium minus provident distinctio.
+            </p>
+            <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
+              <button className="bgColor">Get in touch </button>
+              <button className="border-black border-[2px] ">
+                view all work
+              </button>
+            </div>
+          </div>
+          <div className="max-h-[300px] max-w-[500px] mx-auto">
+            <img
+              src="/caffeZilla.png"
+              alt=""
+              className="w-[100%] h-[100%] object-contain shadow-md"
+            />
+          </div>
+        </div>
+        <div className="mt-[50px] flex [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+          <h1>Additional Projects</h1>
         </div>
       </div>
     </div>
