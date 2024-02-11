@@ -1,0 +1,19 @@
+.body {
+  font-family: "Poppins", monospace;
+  font-size: 16px;
+  /* background: #faf6f0; */
+}
+
+.logo {
+  font-family: "Lobster", sans-serif;
+}
+
+.bgColor {
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+
+.color {
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
