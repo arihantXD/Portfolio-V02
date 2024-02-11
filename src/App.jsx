@@ -38,7 +38,7 @@ function App() {
       </div>
 
       {/* main content style !!!edit */}
-      <div className="min-h-[500px] flex items-center md:min-h-[830px] px-[20px] ">
+      <div className="flex items-center min-h-[650px] md:min-h-[800px] px-[20px] ">
         <div className="w-[100%] [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>
             Hello, <span className="color">I'm Arihant,</span>
@@ -104,7 +104,7 @@ function App() {
       </div>
 
       {/* skill section !!!edit  */}
-      <div className="mt-[80px] h-[600px] px-[20px] min-h-[400px] flex flex-col gap-[50px] md:flex-row md:items-center justify-center">
+      <div className="mt-[50px] h-[600px] px-[20px] min-h-[400px] flex flex-col gap-[50px] md:flex-row md:items-center justify-center">
         <div className="w-[100%] [&>h1]:text-2xl lg:[&>h1]:text-5xl lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>Skills in my arsenal</h1>
           <div className="mt-[40px] p-[10px] flex gap-[25px] lg:gap-[40px] ">
@@ -217,13 +217,13 @@ function App() {
       </div>
 
       {/* projects section !!!edit  */}
-      <div className="px-[20px] mt-[80px] h-[600px] items-center">
+      <div className="px-[20px] h-[600px] items-center">
         <div className="[&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>My Projects</h1>
         </div>
-        <div className="mt-[20px] flex flex-col-reverse md:flex-row">
-          <div className="[&>h1]:text-2xl lg:[&>h1]:text-4xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
-            <h1 className="text-center">Jobify</h1>
+        <div className="mt-[50px] md:w-[80%] mx-auto flex flex-col-reverse md:flex-row md:gap-[20px] md:justify-around">
+          <div className="mt-[30px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+            <h1 className="">Jobify</h1>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
               nostrum nobis architecto tempora eveniet explicabo qui, dicta quas
@@ -236,8 +236,12 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="min-h-[300px] min-w-[300px] border-[2px] border-[black] rounded-md aspect-video object-cover">
-            <img src="/jobify.png" alt="" />
+          <div className="max-h-[300px] max-w-[500px]">
+            <img
+              src="/jobify1.png"
+              alt=""
+              className="w-[100%] h-[100%] object-contain shadow-md"
+            />
           </div>
         </div>
       </div>
