@@ -104,7 +104,7 @@ function App() {
       </div>
 
       {/* skill section !!!edit  */}
-      <div className="mt-[50px] h-[600px] px-[20px] min-h-[400px] flex flex-col gap-[50px] md:flex-row md:items-center justify-center">
+      <div className="mt-[50px] h-[700px] md:h-[600px] px-[20px] min-h-[400px] flex flex-col gap-[50px] md:flex-row md:items-center justify-center">
         <div className="w-[100%] [&>h1]:text-2xl lg:[&>h1]:text-5xl lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>Skills in my arsenal</h1>
           <div className="mt-[40px] p-[10px] flex gap-[25px] lg:gap-[40px] ">
@@ -217,7 +217,7 @@ function App() {
       </div>
 
       {/* projects section !!!edit  */}
-      <div className="px-[20px] h-[600px] items-center">
+      <div className="px-[20px] md:h-[600px] items-center">
         <div className="[&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>My Projects</h1>
         </div>
