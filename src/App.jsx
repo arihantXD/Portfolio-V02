@@ -217,22 +217,22 @@ function App() {
       </div>
 
       {/* projects section !!!edit  */}
-      <div className="px-[20px] md:h-[600px] items-center">
-        <div className="[&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+      <div className="px-[20px]">
+        <div className="[&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>My Projects</h1>
         </div>
-        <div className="mt-[50px] md:w-[80%] mx-auto flex flex-col-reverse md:flex-row md:gap-[20px] md:justify-around">
-          <div className="mt-[30px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+        <div className="mt-[50px] w-[90%] md:w-[85%] mx-auto flex flex-col-reverse md:flex-row md:gap-[20px] md:justify-around">
+          <div className="mt-[30px] [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">Jobify</h1>
-            <p>
+            <p className="">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
               nostrum nobis architecto tempora eveniet explicabo qui, dicta quas
               non veniam aspernatur laudantium minus provident distinctio.
             </p>
             <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
-              <button className="bgColor">Get in touch </button>
+              <button className="bgColor">Go Live </button>
               <button className="border-black border-[2px] ">
-                view all work
+                Git Hub Link
               </button>
             </div>
           </div>
@@ -244,7 +244,7 @@ function App() {
             />
           </div>
         </div>
-        <div className="mt-[50px] md:w-[80%] mx-auto flex flex-col-reverse md:flex-row md:gap-[20px] md:justify-around">
+        <div className="mt-[50px] w-[90%] md:w-[85%] mx-auto flex flex-col-reverse md:flex-row md:gap-[20px] md:justify-around">
           <div className="mt-[30px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">GenZ</h1>
             <p>
@@ -253,9 +253,9 @@ function App() {
               non veniam aspernatur laudantium minus provident distinctio.
             </p>
             <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
-              <button className="bgColor">Get in touch </button>
+              <button className="bgColor">Go Live </button>
               <button className="border-black border-[2px] ">
-                view all work
+                Git Hub Link
               </button>
             </div>
           </div>
@@ -267,7 +267,7 @@ function App() {
             />
           </div>
         </div>
-        <div className="mt-[50px] md:w-[80%] mx-auto flex flex-col-reverse md:flex-row md:gap-[20px] md:justify-around">
+        <div className="mt-[50px] w-[90%] md:w-[85%] mx-auto flex flex-col-reverse md:flex-row md:gap-[20px] md:justify-around">
           <div className="mt-[30px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">CaffeZilla</h1>
             <p>
@@ -276,9 +276,9 @@ function App() {
               non veniam aspernatur laudantium minus provident distinctio.
             </p>
             <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
-              <button className="bgColor">Get in touch </button>
+              <button className="bgColor">Go Live </button>
               <button className="border-black border-[2px] ">
-                view all work
+                Git Hub Link
               </button>
             </div>
           </div>
@@ -290,8 +290,61 @@ function App() {
             />
           </div>
         </div>
-        <div className="mt-[50px] flex [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
-          <h1>Additional Projects</h1>
+      </div>
+      <div className="mt-[50px]  px-[20px] mx-auto  [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+        <h1>Additional Projects</h1>
+        <div className="md:flex md:gap-[5px]">
+          <div className="md:p-[10px] md:shadow-md mt-[30px]  [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+            <h1 className="">Weather.io 2.0</h1>
+            <div className="sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col ">
+              <div>
+                <img
+                  src="/weather.png"
+                  alt=""
+                  className="max-w-[200px] min-h-[130px] md:min-w-[100%] mx-auto"
+                />
+              </div>
+              <p className="mt-[20px]">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                laudantium eaque earum magnam! Eveniet rerum eum expedita dicta
+                iste repellendus.
+              </p>
+            </div>
+          </div>
+          <div className="md:p-[10px] md:shadow-md mt-[30px]   [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+            <h1 className="">Weather.io 1.0</h1>
+            <div className="sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col">
+              <div>
+                <img
+                  src="/weatherOld.png"
+                  alt=""
+                  className="max-w-[200px] min-h-[130px] md:min-w-[100%] mx-auto"
+                />
+              </div>
+              <p className="mt-[20px]">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                laudantium eaque earum magnam! Eveniet rerum eum expedita dicta
+                iste repellendus.
+              </p>
+            </div>
+          </div>
+          <div className="md:p-[10px] md:shadow-md   mt-[30px]  [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+            <h1 className="">Portfolio 1.0</h1>
+            <div className="sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col">
+              <div>
+                <img
+                  src="/portfolio.png"
+                  alt=""
+                  className="max-w-[200px] min-h-[130px] md:min-w-[100%] mx-auto"
+                />
+              </div>
+              <p className="mt-[20px]">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                laudantium eaque earum magnam! Eveniet rerum eum expedita dicta
+                iste repellendus.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
