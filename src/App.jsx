@@ -291,17 +291,17 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="mt-[50px]  px-[20px] mx-auto  [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+      <div className="mt-[50px] lg:mt-[100px] px-[20px] mx-auto  [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
         <h1>Additional Projects</h1>
-        <div className="md:flex md:gap-[5px]">
+        <div className="md:flex md:gap-[5px] lg:gap-[25px]">
           <div className="md:p-[10px] md:shadow-md mt-[30px]  [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">Weather.io 2.0</h1>
-            <div className="sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col ">
+            <div className="sm:flex sm:flex-row-reverse text-sm md:text-base gap-[10px] md:flex-col ">
               <div>
                 <img
                   src="/weather.png"
                   alt=""
-                  className="max-w-[200px] min-h-[130px] md:min-w-[100%] mx-auto"
+                  className="mt-[20px] sm:max-w-[200px] sm:min-h-[130px] md:min-w-[100%] mx-auto"
                 />
               </div>
               <p className="mt-[20px]">
@@ -318,7 +318,7 @@ function App() {
                 <img
                   src="/weatherOld.png"
                   alt=""
-                  className="max-w-[200px] min-h-[130px] md:min-w-[100%] mx-auto"
+                  className="mt-[20px] sm:max-w-[200px] sm:min-h-[130px] md:min-w-[100%] mx-auto"
                 />
               </div>
               <p className="mt-[20px]">
@@ -335,7 +335,7 @@ function App() {
                 <img
                   src="/portfolio.png"
                   alt=""
-                  className="max-w-[200px] min-h-[130px] md:min-w-[100%] mx-auto"
+                  className="mt-[20px] sm:max-w-[200px] sm:min-h-[130px] md:min-w-[100%] mx-auto"
                 />
               </div>
               <p className="mt-[20px]">
