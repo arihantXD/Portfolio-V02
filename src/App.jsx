@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="max-w-[1600px] mx-auto body">
       {/* navbar styling */}
-      <div className="flex text-[white] justify-between items-center bg-[#0F0F0F] rounded-t-xl px-[20px] py-[10px] h-[90px]">
+      <div className="flex text-[white] justify-between items-center bg-[#0F0F0F] rounded-t-xl px-[20px] py-[10px] h-[60px]">
         <span className="logo text-4xl text-[#FB6195]">AK</span>
         <div className="flex gap-[30px]">
           <span>About Me</span>
@@ -105,7 +105,7 @@ function App() {
 
       {/* skill section !!!edit  */}
       <div className="mt-[50px] h-[700px] md:h-[600px] px-[20px] min-h-[400px] flex flex-col gap-[50px] md:flex-row md:items-center justify-center">
-        <div className="w-[100%] [&>h1]:text-2xl lg:[&>h1]:text-5xl lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+        <div className="w-[100%] [&>h1]:text-3xl lg:[&>h1]:text-5xl lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>Skills in my arsenal</h1>
           <div className="mt-[40px] p-[10px] flex gap-[20px] lg:gap-[40px] ">
             <div className="flex flex-col items-center text-xs lg:text-xl text-green-600">
@@ -328,7 +328,7 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="md:p-[10px] md:shadow-md   mt-[30px]  [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+          <div className="md:p-[10px] md:shadow-md  mt-[30px]  [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">Portfolio 1.0</h1>
             <div className="sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col">
               <div>
@@ -345,6 +345,30 @@ function App() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* skills seperator  */}
+      <div className="md:flex md:justify-evenly md:gap-[30px] md:items-center w-[100%] mt-[50px] bg-[#171010] p-[20px]">
+        <div className="mt-[50px] flex items-center flex-col font-semibold">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-4xl md:text-2xl lg:text-4xl">
+            Projects Done
+          </h2>
+          <h1 className="text-white text-3xl md:text-xl lg:text-3xl">8+</h1>
+        </div>
+        <div className="mt-[50px] flex items-center flex-col   font-semibold ">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-4xl md:text-2xl lg:text-4xl">
+            Experience
+          </h2>
+          <h1 className="text-white text-3xl md:text-xl lg:text-3xl">
+            2 Years
+          </h1>
+        </div>
+        <div className="mt-[50px] flex items-center flex-col   font-semibold ">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-4xl md:text-2xl lg:text-4xl">
+            Projects Done
+          </h2>
+          <h1 className="text-white text-3xl md:text-xl lg:text-3xl">8+</h1>
         </div>
       </div>
     </div>
