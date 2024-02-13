@@ -349,26 +349,26 @@ function App() {
       </div>
 
       {/* skills seperator  */}
-      <div className="md:flex md:justify-evenly md:gap-[30px] md:items-center w-[100%] mt-[50px] bg-[#171010] p-[20px]">
-        <div className="mt-[50px] flex items-center flex-col font-semibold">
-          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-4xl md:text-2xl lg:text-4xl">
+      <div className="md:flex md:justify-evenly md:gap-[30px] md:items-center md:py-[50px] w-[100%] mt-[50px] bg-[#0F0F0F] p-[20px]">
+        <div className="mt-[50px] md:m-0 flex items-center flex-col font-semibold">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
             Projects Done
           </h2>
-          <h1 className="text-white text-3xl md:text-xl lg:text-3xl">8+</h1>
+          <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">8+</h1>
         </div>
-        <div className="mt-[50px] flex items-center flex-col   font-semibold ">
-          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-4xl md:text-2xl lg:text-4xl">
+        <div className="mt-[50px] md:m-0 flex items-center flex-col   font-semibold ">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
             Experience
           </h2>
-          <h1 className="text-white text-3xl md:text-xl lg:text-3xl">
+          <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">
             2 Years
           </h1>
         </div>
-        <div className="mt-[50px] flex items-center flex-col   font-semibold ">
-          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-4xl md:text-2xl lg:text-4xl">
-            Projects Done
+        <div className="mt-[50px] md:m-0 flex items-center flex-col   font-semibold ">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
+            Certifications
           </h2>
-          <h1 className="text-white text-3xl md:text-xl lg:text-3xl">8+</h1>
+          <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">4</h1>
         </div>
       </div>
     </div>
