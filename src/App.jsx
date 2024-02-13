@@ -28,9 +28,9 @@ function App() {
   return (
     <div className="max-w-[1600px] mx-auto body">
       {/* navbar styling */}
-      <div className="flex text-[white] justify-between items-center bg-[#0F0F0F] rounded-t-xl px-[20px] py-[10px] h-[60px]">
-        <span className="logo text-4xl text-[#FB6195]">AK</span>
-        <div className="flex gap-[30px]">
+      <div className="flex text-[white] justify-between items-center bg-[#0F0F0F]  px-[20px] py-[10px] h-[70px]">
+        <span className="logo text-3xl text-[#FB6195]">AK</span>
+        <div className="flex text-sm gap-[30px]">
           <span>About Me</span>
           <span>Projects</span>
           <span>Contact</span>
@@ -291,7 +291,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="mt-[50px] lg:mt-[100px] px-[20px] mx-auto  [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+      <div className="mt-[50px] lg:mt-[70px] px-[20px] mx-auto  [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
         <h1>Additional Projects</h1>
         <div className="md:flex md:gap-[5px] lg:gap-[25px]">
           <div className="md:p-[10px] md:shadow-md mt-[30px]  [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
@@ -348,15 +348,15 @@ function App() {
         </div>
       </div>
 
-      {/* skills seperator  */}
-      <div className="md:flex md:justify-evenly md:gap-[30px] md:items-center md:py-[50px] w-[100%] mt-[50px] bg-[#0F0F0F] p-[20px]">
-        <div className="mt-[50px] md:m-0 flex items-center flex-col font-semibold">
+      {/*  seperator  */}
+      <div className="md:flex md:justify-evenly md:gap-[30px] md:items-center md:py-[50px]  w-[100%] mt-[50px] bg-[#0F0F0F] py-[40px]">
+        <div className="mt-[30px] md:m-0 flex items-center flex-col font-semibold">
           <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
             Projects Done
           </h2>
           <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">8+</h1>
         </div>
-        <div className="mt-[50px] md:m-0 flex items-center flex-col   font-semibold ">
+        <div className="mt-[30px] md:m-0 flex items-center flex-col   font-semibold ">
           <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
             Experience
           </h2>
@@ -364,12 +364,44 @@ function App() {
             2 Years
           </h1>
         </div>
-        <div className="mt-[50px] md:m-0 flex items-center flex-col   font-semibold ">
+        <div className="mt-[30px] mb-[10px] md:m-0 flex items-center flex-col   font-semibold ">
           <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
             Certifications
           </h2>
           <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">4</h1>
         </div>
+      </div>
+
+      {/* footer and contacts  */}
+      <div className="mt-[50px] px-[2px] py-[]">
+        <h1>Contact Me</h1>
+        <div>
+          <div>
+            <div>
+              <h2>
+                <span>A</span>rihant
+              </h2>
+            </div>
+            <div>
+              <span>Home</span>
+              <span>Projects</span>
+              <span>My Skills</span>
+            </div>
+          </div>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reprehenderit neque ut dolores inventore veritatis ullam in, ipsa
+              saepe quia eveniet.
+            </p>
+            <div>
+              <SiExpress />
+              <SiExpress />
+              <SiExpress />
+            </div>
+          </div>
+        </div>
+        <div></div>
       </div>
     </div>
   );
