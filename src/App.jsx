@@ -5,6 +5,9 @@ import { FaReact } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 
 import "./App.css";
 import { useState } from "react";
@@ -217,7 +220,7 @@ function App() {
       </div>
 
       {/* projects section !!!edit  */}
-      <div className="px-[20px]">
+      <div className="px-[20px] mt-[130px] md:mt-[70px]">
         <div className="[&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>My Projects</h1>
         </div>
@@ -373,31 +376,43 @@ function App() {
       </div>
 
       {/* footer and contacts  */}
-      <div className="mt-[50px] px-[2px] py-[]">
+      <div className="px-[20px] mb-[20px] mt-[70px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
         <h1>Contact Me</h1>
         <div>
-          <div>
+          <div className="flex flex-row items-center justify-between">
             <div>
-              <h2>
-                <span>A</span>rihant
-              </h2>
+              <h1 className="text-xl lg:text-2xl leading-relaxed lg:leading-[70px] font-light">
+                <span className="text-2xl lg:text-5xl leading-relaxed lg:leading-[70px] font-medium">
+                  A
+                </span>
+                rihant
+              </h1>
             </div>
-            <div>
+            <div className="flex font-light gap-[25px]">
               <span>Home</span>
               <span>Projects</span>
               <span>My Skills</span>
             </div>
           </div>
-          <div>
-            <p>
+          <div className="flex flex-col-reverse gap-[20px] justify-between md:flex-row md:gap-[200px]">
+            <p className="text-sm font-light">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Reprehenderit neque ut dolores inventore veritatis ullam in, ipsa
               saepe quia eveniet.
             </p>
-            <div>
-              <SiExpress />
-              <SiExpress />
-              <SiExpress />
+            <div className="flex gap-[20px] mt-[10px]">
+              <FaFacebookF
+                size={45}
+                className="rounded-full border-[2px] border-[pink] p-[10px]"
+              />
+              <FaLinkedinIn
+                size={45}
+                className="rounded-full border-[2px] border-[pink] p-[10px]"
+              />
+              <FaInstagram
+                size={45}
+                className="rounded-full border-[2px] border-[pink] p-[10px]"
+              />
             </div>
           </div>
         </div>
