@@ -137,7 +137,7 @@ function App() {
             Get in touch
           </button>
         </div>
-        <div className=" min-w-[45%] flex flex-col [&>div]:mb-[10px]">
+        <div className=" min-w-[45%] flex flex-col justify-center [&>div]:mb-[10px]">
           <div className="">
             <div className="border-b-[2px] border-[#ddd] flex items-center justify-between w-[100%] [&>h1]:text-2xl lg:[&>h1]:text-4xl lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
               <h1 className="">Front End</h1>
@@ -376,19 +376,19 @@ function App() {
       </div>
 
       {/* footer and contacts  */}
-      <div className="px-[20px] mb-[20px] mt-[70px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+      <div className="px-[20px] mb-[20px] mt-[50px] md:mt-[70px] [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
         <h1>Contact Me</h1>
         <div>
           <div className="flex flex-row items-center justify-between">
             <div>
-              <h1 className="text-xl lg:text-2xl leading-relaxed lg:leading-[70px] font-light">
+              <h1 className="text-xl lg:text-3xl leading-relaxed lg:leading-[70px] font-light">
                 <span className="text-2xl lg:text-5xl leading-relaxed lg:leading-[70px] font-medium">
                   A
                 </span>
                 rihant
               </h1>
             </div>
-            <div className="flex font-light gap-[25px]">
+            <div className="flex text-sm md:text-base font-light gap-[25px]">
               <span>Home</span>
               <span>Projects</span>
               <span>My Skills</span>
