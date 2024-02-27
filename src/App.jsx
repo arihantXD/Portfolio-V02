@@ -8,6 +8,7 @@ import { DiMongodb } from "react-icons/di";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
+import { nodeMailjet } from "node-mailjet";
 
 import "./App.css";
 import { useState } from "react";
@@ -16,6 +17,43 @@ function App() {
   const [front, setFront] = useState(true);
   const [back, setBack] = useState(true);
   const [add, setAdd] = useState(true);
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+
+  const sendMessage = () => {
+    mailjet.apiConnect(
+      import.meta.env.VITE_PUBLIC_KEY,
+      import.meta.env.VITE_PRIVATE_KEY
+    );
+    console.log(name, email, message);
+    // mailjet.post("send", { version: "v3.1" })
+    //     .request({
+    //       Messages: [
+    //         {
+    //           From: {
+    //             Email: "kamdearihant01@gmail.com",
+    //             Name: name,
+    //           },
+    //           To: [
+    //             {
+    //               Email: "xtremeplay000@gmail.com",
+    //             },
+    //           ],
+    //           Subject: `${name} via Portfolio Website`,
+    //           TextPart: `${msg}`,
+    //           HTMLPart: "",
+    //         },
+    //       ],
+    //     })
+    //     .then((result) => {
+    //       console.log("done");
+    //     })
+    //     .catch((err) => {
+    //       console.log("fault sending the mail");
+    //     });
+    // }
+  };
 
   const handleFront = () => {
     setFront(!front);
@@ -129,9 +167,9 @@ function App() {
             </div>
           </div>
           <p className="mt-[10px]">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            voluptatibus, quaerat quia cupiditate soluta cumque unde cum dicta
-            exercitationem id!
+            Proficient in the MERN stack, I specialize in React for dynamic
+            front-end, Node.js/Express.js for server-side efficiency, and
+            MongoDB for scalable databases.
           </p>
           <button className="mt-[60px] min-w-[200px] bgColor uppercase font-semibold py-[12px] px-[25px] rounded-xl">
             Get in touch
@@ -223,8 +261,8 @@ function App() {
       <div
         className={`${
           (!front && !back) || (!add && !back) || (!front && !add)
-            ? "mt-[130px]"
-            : "mt-[40px]"
+            ? "mt-[100px]"
+            : "mt-[20px]"
         }  px-[20px] `}
       >
         <div className="[&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
@@ -234,18 +272,20 @@ function App() {
           <div className="mt-[30px] [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">Jobify</h1>
             <p className="">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
-              nostrum nobis architecto tempora eveniet explicabo qui, dicta quas
-              non veniam aspernatur laudantium minus provident distinctio.
+              "Jobify" - my project designed for streamlined job application
+              tracking. Users can effortlessly categorize job roles tech or non
+              - tech, and classify job type, making it easy to organize and
+              monitor their job search progress, whether it's for full-time,
+              part-time, or any other opportunity.
             </p>
-            <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
+            <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
               <button className="bgColor">Go Live </button>
               <button className="border-black border-[2px] ">
                 Git Hub Link
               </button>
             </div>
           </div>
-          <div className="max-h-[300px] max-w-[500px] mx-auto">
+          <div className="max-h-[300px] max-w-[500px] mx-auto ">
             <img
               src="/jobify1.png"
               alt=""
@@ -257,11 +297,13 @@ function App() {
           <div className="mt-[30px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">GenZ</h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
-              nostrum nobis architecto tempora eveniet explicabo qui, dicta quas
-              non veniam aspernatur laudantium minus provident distinctio.
+              "GenZ" - a full-stack e-commerce store for Gen Z clothing brand.
+              Users can seamlessly register, log in, add items to their cart,
+              and simulate the purchase process. GenZ offers a dummy flow from
+              registration to purchase, providing a user-friendly experience for
+              exploring and interacting with the project.
             </p>
-            <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
+            <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
               <button className="bgColor">Go Live </button>
               <button className="border-black border-[2px] ">
                 Git Hub Link
@@ -280,11 +322,13 @@ function App() {
           <div className="mt-[30px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">CaffeZilla</h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
-              nostrum nobis architecto tempora eveniet explicabo qui, dicta quas
-              non veniam aspernatur laudantium minus provident distinctio.
+              "Caffezilla" - a dynamic project where users can register, log in,
+              and share their cafe experiences through reviews complete with
+              photos. Enhancing the social aspect, users can track their
+              location on an integrated map, allowing others to explore and
+              contribute reviews for the cafes they've visited.
             </p>
-            <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
+            <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
               <button className="bgColor">Go Live </button>
               <button className="border-black border-[2px] ">
                 Git Hub Link
@@ -359,26 +403,26 @@ function App() {
       </div>
 
       {/*  seperator  */}
-      <div className="md:flex md:justify-evenly md:gap-[30px] md:items-center md:py-[50px]  w-[100%] mt-[50px] bg-[#0F0F0F] py-[40px]">
-        <div className="mt-[40px] md:m-0 flex items-center flex-col font-semibold">
-          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
+      <div className="md:flex md:justify-evenly md:gap-[30px] md:items-center md:py-[30px]  w-[100%] mt-[50px] bg-[#0F0F0F] py-[40px]">
+        <div className="mt-[30px] md:m-0 flex items-center flex-col font-semibold">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-xl lg:text-3xl">
             Projects Done
           </h2>
-          <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">8+</h1>
+          <h1 className="text-white md:mt-[10px] text-lg lg:text-xl">8+</h1>
         </div>
-        <div className="mt-[40px] md:m-0 flex items-center flex-col   font-semibold ">
-          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
+        <div className="mt-[30px] md:m-0 flex items-center flex-col   font-semibold ">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-xl lg:text-3xl">
             Experience
           </h2>
-          <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">
+          <h1 className="text-white md:mt-[10px] text-lg lg:text-xl">
             2 Years
           </h1>
         </div>
-        <div className="mt-[40px] mb-[10px] md:m-0 flex items-center flex-col   font-semibold ">
-          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
+        <div className="mt-[30px] mb-[10px] md:m-0 flex items-center flex-col   font-semibold ">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-lg lg:text-3xl">
             Certifications
           </h2>
-          <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">4</h1>
+          <h1 className="text-white md:mt-[10px] text-lg lg:text-xl">4</h1>
         </div>
       </div>
 
@@ -394,53 +438,60 @@ function App() {
               rihant
             </h1>
           </div>
-          <div className="mt-[20px] py-[10px] flex flex-col items-center max-w-[800px] mx-auto shadow-md border-t-[2px] border-[pink]">
+          <div className="mt-[20px] py-[20px] flex flex-col items-center max-w-[800px] mx-auto shadow-sm border-t-[2px] border-[pink]">
             <span className="text-lg md:text-3xl leading-relaxed lg:leading-[70px] font-light text-center">
               SEND ME A MESSAGE
             </span>
             <div className="min-w-[100%] mt-[5px] border-b-[2px] border-[pink] "></div>
 
             <input
-              className="border-b-[2px] border-[#ddd] mt-[20px] w-[97%] max-w-[600px] px-[2px] text-[#676767] outline-none"
+              className="border-b-[2px] border-[#ddd] mt-[25px] w-[97%] max-w-[600px] px-[2px] text-[#676767] outline-none"
               type="text"
-              name=""
+              onChange={setName((e) => e.target.value)}
+              value={name}
               id=""
               placeholder="Ex. Arihant Kamde"
             />
             <input
-              className="border-b-[2px] text-[#676767] border-[#ddd] mt-[20px] w-[97%] px-[2px] max-w-[600px] placeholder:text-[#] outline-none"
+              className="border-b-[2px] text-[#676767] border-[#ddd] mt-[25px] w-[97%] px-[2px] max-w-[600px] placeholder:text-[#] outline-none"
               type="text"
-              name=""
+              onChange={setEmail((e) => e.target.value)}
+              value={email}
               id=""
-              placeholder="Enter your name"
+              placeholder="Ex. kamdearihant@gmail.com"
             />
             <textarea
-              className="outline-none text-[#676767] mt-[20px] p-[2px] border-[2px] min-h-[150px]  w-[97%] max-w-[600px]"
-              placeholder="Enter your message"
+              className="outline-none text-[#676767] mt-[25px] p-[2px] border-[2px] min-h-[150px] max-h-[150px] w-[97%] max-w-[600px]"
+              onChange={setMessage((e) => e.target.value)}
+              value={message}
+              placeholder="Ex. Hi Arihant! you are the best React Js Developer."
             ></textarea>
-            <div className="mt-[20px] [&>button]:uppercase [&>button]:font-bold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px] ">
-              <button className="bg-[pink] w-[200px] text-[#333]">
+            <div className="mt-[30px] [&>button]:uppercase [&>button]:font-bold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px] ">
+              <button
+                onClick={sendMessage}
+                className="bg-[pink] w-[200px] text-[#333]"
+              >
                 Send Message
               </button>
             </div>
           </div>
-          <div className="mt-[40px] flex flex-col-reverse gap-[20px] justify-between md:flex-row md:gap-[200px]">
+          <div className="mt-[30px] flex flex-col-reverse   gap-[20px]  md:flex-row md:items-center md:gap-[200px]">
             <p className="text-sm font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit neque ut dolores inventore veritatis ullam in, ipsa
-              saepe quia eveniet.
+              Reach out through the form or connect via the links below. Excited
+              to hear from you - whether it's about collaboration or just a
+              friendly chat. Thanks for stopping by!
             </p>
             <div className="flex gap-[20px] mt-[10px]">
               <FaFacebookF
-                size={45}
+                size={35}
                 className="rounded-full border-[2px] border-[pink] p-[10px]"
               />
               <FaLinkedinIn
-                size={45}
+                size={35}
                 className="rounded-full border-[2px] border-[pink] p-[10px]"
               />
               <FaInstagram
-                size={45}
+                size={35}
                 className="rounded-full border-[2px] border-[pink] p-[10px]"
               />
             </div>
