@@ -9,6 +9,7 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { nodeMailjet } from "node-mailjet";
 
 import "./App.css";
 import { useState } from "react";
@@ -17,6 +18,43 @@ function App() {
   const [front, setFront] = useState(true);
   const [back, setBack] = useState(true);
   const [add, setAdd] = useState(true);
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+
+  const sendMessage = () => {
+    mailjet.apiConnect(
+      import.meta.env.VITE_PUBLIC_KEY,
+      import.meta.env.VITE_PRIVATE_KEY
+    );
+    console.log(name, email, message);
+    // mailjet.post("send", { version: "v3.1" })
+    //     .request({
+    //       Messages: [
+    //         {
+    //           From: {
+    //             Email: "kamdearihant01@gmail.com",
+    //             Name: name,
+    //           },
+    //           To: [
+    //             {
+    //               Email: "xtremeplay000@gmail.com",
+    //             },
+    //           ],
+    //           Subject: `${name} via Portfolio Website`,
+    //           TextPart: `${msg}`,
+    //           HTMLPart: "",
+    //         },
+    //       ],
+    //     })
+    //     .then((result) => {
+    //       console.log("done");
+    //     })
+    //     .catch((err) => {
+    //       console.log("fault sending the mail");
+    //     });
+    // }
+  };
 
   const handleFront = () => {
     setFront(!front);
@@ -33,8 +71,8 @@ function App() {
     <div className="max-w-[1600px] mx-auto body">
       {/* navbar styling */}
       <div className="flex text-[white] justify-between items-center bg-[#0F0F0F]  px-[20px] py-[10px] h-[70px]">
-        <span className="logo text-3xl text-[#FB6195]">AK</span>
-        <div className="flex text-sm gap-[30px]">
+        <span className="logo text-3xl md:text-4xl text-[#FB6195]">AK</span>
+        <div className="flex text-sm md:text-xl gap-[30px]">
           <span>About Me</span>
           <span>Projects</span>
           <span>Contact</span>
@@ -50,8 +88,8 @@ function App() {
           <h1>a MERN Stack Developer</h1>
           <h1>living in Nagpur</h1>
           <p className="mt-[50px]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt,
-            soluta dolores, asperiores eligendi rerum excepturi.
+            👋 Hey! I am a MERN Stack Developer. I love working on exciting
+            projects and building modern and minimalistic web designs🚀.
           </p>
           <div className="mt-[70px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
             <button className="bgColor">Get in touch </button>
@@ -108,7 +146,7 @@ function App() {
       </div>
 
       {/* skill section !!!edit  */}
-      <div className="mt-[50px] h-[700px] md:h-[600px] px-[20px] min-h-[400px] flex flex-col gap-[50px] md:flex-row md:items-center justify-center">
+      <div className="mt-[50px] h-[700px]  px-[20px] min-h-[400px] flex flex-col gap-[50px] md:flex-row md:items-center justify-center">
         <div className="w-[100%] [&>h1]:text-3xl lg:[&>h1]:text-5xl lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>Skills in my arsenal</h1>
           <div className="mt-[40px] p-[10px] flex gap-[20px] lg:gap-[40px] ">
@@ -130,15 +168,15 @@ function App() {
             </div>
           </div>
           <p className="mt-[10px]">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            voluptatibus, quaerat quia cupiditate soluta cumque unde cum dicta
-            exercitationem id!
+            Proficient in the MERN stack, I specialize in React for dynamic
+            front-end, Node.js/Express.js for server-side efficiency, and
+            MongoDB for scalable databases.
           </p>
           <button className="mt-[60px] min-w-[200px] bgColor uppercase font-semibold py-[12px] px-[25px] rounded-xl">
             Get in touch
           </button>
         </div>
-        <div className=" min-w-[45%] flex flex-col [&>div]:mb-[10px]">
+        <div className=" min-w-[45%] flex flex-col justify-center [&>div]:mb-[10px]">
           <div className="">
             <div className="border-b-[2px] border-[#ddd] flex items-center justify-between w-[100%] [&>h1]:text-2xl lg:[&>h1]:text-4xl lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
               <h1 className="">Front End</h1>
@@ -235,11 +273,13 @@ function App() {
           <div className="mt-[30px] [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">Jobify</h1>
             <p className="">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
-              nostrum nobis architecto tempora eveniet explicabo qui, dicta quas
-              non veniam aspernatur laudantium minus provident distinctio.
+              "Jobify" - my project designed for streamlined job application
+              tracking. Users can effortlessly categorize job roles tech or non
+              - tech, and classify job type, making it easy to organize and
+              monitor their job search progress, whether it's for full-time,
+              part-time, or any other opportunity.
             </p>
-            <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
+            <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
               <button className="bgColor">
                 <a target="blank" href="https://jobify-sdkn.onrender.com/">
                   Go Live
@@ -252,7 +292,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div className="max-h-[300px] max-w-[500px] mx-auto">
+          <div className="max-h-[300px] max-w-[500px] mx-auto ">
             <img
               src="/jobify1.png"
               alt=""
@@ -264,11 +304,13 @@ function App() {
           <div className="mt-[30px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">GenZ</h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
-              nostrum nobis architecto tempora eveniet explicabo qui, dicta quas
-              non veniam aspernatur laudantium minus provident distinctio.
+              "GenZ" - a full-stack e-commerce store for Gen Z clothing brand.
+              Users can seamlessly register, log in, add items to their cart,
+              and simulate the purchase process. GenZ offers a dummy flow from
+              registration to purchase, providing a user-friendly experience for
+              exploring and interacting with the project.
             </p>
-            <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
+            <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
               <button className="bgColor">
                 <a target="blank" href="https://gen-z-five.vercel.app/">
                   Go Live
@@ -293,16 +335,14 @@ function App() {
           <div className="mt-[30px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">CaffeZilla</h1>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
-              nostrum nobis architecto tempora eveniet explicabo qui, dicta quas
-              non veniam aspernatur laudantium minus provident distinctio.
+              "Caffezilla" - a dynamic project where users can register, log in,
+              and share their cafe experiences through reviews complete with
+              photos. Enhancing the social aspect, users can track their
+              location on an integrated map, allowing others to explore and
+              contribute reviews for the cafes they've visited.
             </p>
-            <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
-              <button className="bgColor">
-                <a target="blank" href="https://caffe-zilla.vercel.app/">
-                  Go Live
-                </a>
-              </button>
+            <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
+              <button className="bgColor">Go Live </button>
               <button className="border-black border-[2px] ">
                 <a
                   target="blank"
@@ -325,7 +365,7 @@ function App() {
       <div className="mt-[50px] lg:mt-[70px] px-[20px] mx-auto  [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
         <h1>Additional Projects</h1>
         <div className="md:flex md:gap-[5px] lg:gap-[25px]">
-          <div className="md:p-[10px] md:shadow-md mt-[30px]  [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+          <div className="md:max-w-[33%] md:p-[10px] md:shadow-md mt-[30px]  [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">Weather.io 2.0</h1>
             <div className="sm:flex sm:flex-row-reverse text-sm md:text-base gap-[10px] md:flex-col ">
               <div>
@@ -337,16 +377,17 @@ function App() {
                   />
                 </a>
               </div>
-              <p className="mt-[20px]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                laudantium eaque earum magnam! Eveniet rerum eum expedita dicta
-                iste repellendus.
+              <p className="mt-[20px] text-sm">
+                A sleek user-friendly weather application crafted with React.
+                Get real-time weather information for any location worldwide,
+                including current conditions and a 5-day forecast with an
+                intuitive graph that visualizes temperature trends.
               </p>
             </div>
           </div>
-          <div className="md:p-[10px] md:shadow-md mt-[30px]   [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+          <div className="md:max-w-[33%] md:p-[10px] md:shadow-md mt-[30px]   [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">Weather.io 1.0</h1>
-            <div className="sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col">
+            <div className=" sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col">
               <div>
                 <a target="blank" href="https://weather-io-kappa.vercel.app/">
                   <img
@@ -356,14 +397,14 @@ function App() {
                   />
                 </a>
               </div>
-              <p className="mt-[20px]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                laudantium eaque earum magnam! Eveniet rerum eum expedita dicta
-                iste repellendus.
+              <p className="mt-[20px] text-sm">
+                An environmentally conscious weather app crafted using vanilla
+                JavaScript, HTML, and CSS. This app focuses on air quality. Get
+                real-time data on pollutants, sunrise, and sunset times.
               </p>
             </div>
           </div>
-          <div className="md:p-[10px] md:shadow-md  mt-[30px]  [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+          <div className="md:max-w-[33%] md:p-[10px] md:shadow-md  mt-[30px]  [&>h1]:text-xl lg:[&>h1]:text-3xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
             <h1 className="">Portfolio 1.0</h1>
             <div className="sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col">
               <div>
@@ -378,10 +419,10 @@ function App() {
                   />
                 </a>
               </div>
-              <p className="mt-[20px]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
-                laudantium eaque earum magnam! Eveniet rerum eum expedita dicta
-                iste repellendus.
+              <p className="mt-[20px] text-sm">
+                A dynamic showcase of my skills, crafted using HTML, CSS, and
+                JavaScript. Dive into my projects, and do checkout the magic of
+                GSAP animations.
               </p>
             </div>
           </div>
@@ -389,65 +430,95 @@ function App() {
       </div>
 
       {/*  seperator  */}
-      <div className="md:flex md:justify-evenly md:gap-[30px] md:items-center md:py-[50px]  w-[100%] mt-[50px] bg-[#0F0F0F] py-[40px]">
+      <div className="md:flex md:justify-evenly md:gap-[30px] md:items-center md:py-[30px]  w-[100%] mt-[50px] bg-[#0F0F0F] py-[40px]">
         <div className="mt-[30px] md:m-0 flex items-center flex-col font-semibold">
-          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-xl lg:text-3xl">
             Projects Done
           </h2>
-          <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">8+</h1>
+          <h1 className="text-white md:mt-[10px] text-lg lg:text-xl">8+</h1>
         </div>
         <div className="mt-[30px] md:m-0 flex items-center flex-col   font-semibold ">
-          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-xl lg:text-3xl">
             Experience
           </h2>
-          <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">
+          <h1 className="text-white md:mt-[10px] text-lg lg:text-xl">
             2 Years
           </h1>
         </div>
         <div className="mt-[30px] mb-[10px] md:m-0 flex items-center flex-col   font-semibold ">
-          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-2xl lg:text-4xl">
+          <h2 className=" uppercase color leading-relaxed lg:leading-[70px] text-lg lg:text-3xl">
             Certifications
           </h2>
-          <h1 className="text-white md:mt-[10px] text-xl lg:text-2xl">4</h1>
+          <h1 className="text-white md:mt-[10px] text-lg lg:text-xl">4</h1>
         </div>
       </div>
 
       {/* footer and contacts  */}
-      <div className="px-[20px] mb-[20px] mt-[70px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
+      <div className="px-[20px] mb-[20px] mt-[50px] md:mt-[70px] [&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
         <h1>Contact Me</h1>
         <div>
-          <div className="flex flex-row items-center justify-between">
-            <div>
-              <h1 className="text-xl lg:text-2xl leading-relaxed lg:leading-[70px] font-light">
-                <span className="text-2xl lg:text-5xl leading-relaxed lg:leading-[70px] font-medium">
-                  A
-                </span>
-                rihant
-              </h1>
-            </div>
-            <div className="flex font-light gap-[25px]">
-              <span>Home</span>
-              <span>Projects</span>
-              <span>My Skills</span>
+          <div className="">
+            <h1 className="text-xl lg:text-3xl leading-relaxed l7g:leading-[70px] font-light">
+              <span className="text-2xl md:text-4xl leading-relaxed lg:leading-[70px] font-medium">
+                A
+              </span>
+              rihant
+            </h1>
+          </div>
+          <div className="mt-[20px] py-[20px] flex flex-col items-center max-w-[800px] mx-auto shadow-sm border-t-[2px] border-[pink]">
+            <span className="text-lg md:text-3xl leading-relaxed lg:leading-[70px] font-light text-center">
+              SEND ME A MESSAGE
+            </span>
+            <div className="min-w-[100%] mt-[5px] border-b-[2px] border-[pink] "></div>
+
+            <input
+              className="border-b-[2px] border-[#ddd] mt-[25px] w-[97%] max-w-[600px] px-[2px] text-[#676767] outline-none"
+              type="text"
+              onChange={setName((e) => e.target.value)}
+              value={name}
+              id=""
+              placeholder="Ex. Arihant Kamde"
+            />
+            <input
+              className="border-b-[2px] text-[#676767] border-[#ddd] mt-[25px] w-[97%] px-[2px] max-w-[600px] placeholder:text-[#] outline-none"
+              type="text"
+              onChange={setEmail((e) => e.target.value)}
+              value={email}
+              id=""
+              placeholder="Ex. kamdearihant@gmail.com"
+            />
+            <textarea
+              className="outline-none text-[#676767] mt-[25px] p-[2px] border-[2px] min-h-[150px] max-h-[150px] w-[97%] max-w-[600px]"
+              onChange={setMessage((e) => e.target.value)}
+              value={message}
+              placeholder="Ex. Hi Arihant! you are the best React Js Developer."
+            ></textarea>
+            <div className="mt-[30px] [&>button]:uppercase [&>button]:font-bold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px] ">
+              <button
+                onClick={sendMessage}
+                className="bg-[pink] w-[200px] text-[#333]"
+              >
+                Send Message
+              </button>
             </div>
           </div>
-          <div className="flex flex-col-reverse gap-[20px] justify-between md:flex-row md:gap-[200px]">
+          <div className="mt-[30px] flex flex-col-reverse   gap-[20px]  md:flex-row md:items-center md:gap-[200px]">
             <p className="text-sm font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit neque ut dolores inventore veritatis ullam in, ipsa
-              saepe quia eveniet.
+              Reach out through the form or connect via the links below. Excited
+              to hear from you - whether it's about collaboration or just a
+              friendly chat. Thanks for stopping by!
             </p>
             <div className="flex gap-[20px] mt-[10px]">
               <FaFacebookF
-                size={45}
+                size={35}
                 className="rounded-full border-[2px] border-[pink] p-[10px]"
               />
               <FaLinkedinIn
-                size={45}
+                size={35}
                 className="rounded-full border-[2px] border-[pink] p-[10px]"
               />
               <FaInstagram
-                size={45}
+                size={35}
                 className="rounded-full border-[2px] border-[pink] p-[10px]"
               />
             </div>
