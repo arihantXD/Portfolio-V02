@@ -9,7 +9,6 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { useRef, useState } from "react";
-import { Form } from "react-router-dom";
 
 import "./App.css";
 import emailjs from "@emailjs/browser";
@@ -50,8 +49,8 @@ function App() {
       );
     toast.promise(result, {
       loading: "Sending the message.",
-      success: "Arihant got it ✅",
-      error: "Error when fetching",
+      success: "Arihant got it ✅.",
+      error: "Message not sent.",
     });
   };
 
@@ -72,14 +71,23 @@ function App() {
       <div className="flex text-[white] justify-between items-center bg-[#0F0F0F]  px-[20px] py-[10px] h-[70px]">
         <span className="logo text-3xl md:text-4xl text-[#FB6195]">AK</span>
         <div className="flex text-sm md:text-xl gap-[30px]">
-          <span>About Me</span>
-          <span>Projects</span>
-          <span>Contact</span>
+          <span>
+            <a href="#about-me">About Me</a>
+          </span>
+          <span>
+            <a href="#projects">Projects</a>
+          </span>
+          <span>
+            <a href="#contact-me">Contact Me</a>
+          </span>
         </div>
       </div>
 
       {/* main content style !!!edit */}
-      <div className="flex items-center min-h-[650px] md:min-h-[800px] px-[20px] ">
+      <div
+        id="about-me"
+        className="flex items-center min-h-[650px] md:min-h-[800px] px-[20px] "
+      >
         <div className="w-[100%] [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>
             Hello, <span className="color">I'm Arihant,</span>
@@ -91,9 +99,11 @@ function App() {
             projects and building modern and minimalistic web designs🚀.
           </p>
           <div className="mt-[70px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
-            <button className="bgColor">Get in touch </button>
+            <button className="bgColor">
+              <a href="/resume.docx">Download Project</a>
+            </button>
             <button className="border-black border-[2px] ">
-              view all work
+              <a href="#projects">view all work</a>
             </button>
           </div>
         </div>
@@ -171,9 +181,11 @@ function App() {
             front-end, Node.js/Express.js for server-side efficiency, and
             MongoDB for scalable databases.
           </p>
-          <button className="mt-[60px] min-w-[200px] bgColor uppercase font-semibold py-[12px] px-[25px] rounded-xl">
-            Get in touch
-          </button>
+          <div className="my-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
+            <button className="bgColor">
+              <a href="#contact-me">Get in touch</a>
+            </button>
+          </div>
         </div>
         <div className=" min-w-[45%] flex flex-col justify-center [&>div]:mb-[10px]">
           <div className="">
@@ -203,7 +215,7 @@ function App() {
               </span>
             </div>
           </div>
-          <div className="mt-[30px] lg:mt-[40px]">
+          <div className="mt-[20px] lg:mt-[40px]">
             <div className="border-b-[2px] border-[#ddd] flex items-center justify-between w-[100%] [&>h1]:text-2xl lg:[&>h1]:text-4xl lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
               <h1 className="">Back End</h1>
               <GrAdd
@@ -259,6 +271,7 @@ function App() {
 
       {/* projects section !!!edit  */}
       <div
+        id="projects"
         className={`${
           !front && !back
             ? "px-[20px] mt-[140px] md:mt-[30px]"
@@ -468,7 +481,10 @@ function App() {
             <span className="text-lg md:text-3xl leading-relaxed lg:leading-[70px] font-light text-center">
               SEND ME A MESSAGE
             </span>
-            <div className="min-w-[100%] mt-[5px] border-b-[2px] border-[pink] "></div>
+            <div
+              className="min-w-[100%] mt-[5px] border-b-[2px] border-[pink] "
+              id="contact-me"
+            ></div>
             <form ref={form} onSubmit={sendMessage}>
               <input
                 className="border-b-[2px] border-[#ddd] mt-[25px] w-[97%] max-w-[600px] px-[2px] text-[#676767] outline-none"
@@ -513,22 +529,31 @@ function App() {
               friendly chat. Thanks for stopping by!
             </p>
             <div className="flex gap-[20px] mt-[10px]">
-              <FaFacebookF
-                size={35}
-                className="rounded-full border-[2px] border-[pink] p-[10px]"
-              />
-              <FaLinkedinIn
-                size={35}
-                className="rounded-full border-[2px] border-[pink] p-[10px]"
-              />
-              <FaInstagram
-                size={35}
-                className="rounded-full border-[2px] border-[pink] p-[10px]"
-              />
+              <a target="blank" href="https://www.facebook.com/01arihant/">
+                <FaFacebookF
+                  size={35}
+                  className="rounded-full border-[2px] border-[pink] p-[10px]"
+                />
+              </a>
+
+              <a
+                target="blank"
+                href="https://www.linkedin.com/in/arihant-kamde-2976451b5/"
+              >
+                <FaLinkedinIn
+                  size={35}
+                  className="rounded-full border-[2px] border-[pink] p-[10px]"
+                />
+              </a>
+              <a target="blank" href="https://www.instagram.com/arihant0.1/">
+                <FaInstagram
+                  size={35}
+                  className="rounded-full border-[2px] border-[pink] p-[10px]"
+                />
+              </a>
             </div>
           </div>
         </div>
-        <div></div>
       </div>
     </div>
   );
