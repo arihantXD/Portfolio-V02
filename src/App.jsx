@@ -8,52 +8,51 @@ import { DiMongodb } from "react-icons/di";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
-import { Link } from "react-router-dom";
-import { nodeMailjet } from "node-mailjet";
+import { useRef, useState } from "react";
+import { Form } from "react-router-dom";
 
 import "./App.css";
-import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 function App() {
   const [front, setFront] = useState(true);
   const [back, setBack] = useState(true);
   const [add, setAdd] = useState(true);
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [name, setName] = useState("");
-
-  const sendMessage = () => {
-    mailjet.apiConnect(
-      import.meta.env.VITE_PUBLIC_KEY,
-      import.meta.env.VITE_PRIVATE_KEY
-    );
-    console.log(name, email, message);
-    // mailjet.post("send", { version: "v3.1" })
-    //     .request({
-    //       Messages: [
-    //         {
-    //           From: {
-    //             Email: "kamdearihant01@gmail.com",
-    //             Name: name,
-    //           },
-    //           To: [
-    //             {
-    //               Email: "xtremeplay000@gmail.com",
-    //             },
-    //           ],
-    //           Subject: `${name} via Portfolio Website`,
-    //           TextPart: `${msg}`,
-    //           HTMLPart: "",
-    //         },
-    //       ],
-    //     })
-    //     .then((result) => {
-    //       console.log("done");
-    //     })
-    //     .catch((err) => {
-    //       console.log("fault sending the mail");
-    //     });
-    // }
+  const [formSubmit, setFormSubmit] = useState(false);
+  const form = useRef();
+  const sendMessage = (e) => {
+    e.preventDefault();
+    setFormSubmit(() => true);
+    const name = form.current.from_name.value;
+    const email = form.current.reply_to.value;
+    const message = form.current.message.value;
+    if (!name || !email || !message) {
+      toast.error("Please fill all the details");
+    }
+    form.current.from_name.value = name.charAt(0).toUpperCase() + name.slice(1);
+    const result = emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+    toast.promise(result, {
+      loading: "Sending the message.",
+      success: "Arihant got it ✅",
+      error: "Error when fetching",
+    });
   };
 
   const handleFront = () => {
@@ -470,37 +469,42 @@ function App() {
               SEND ME A MESSAGE
             </span>
             <div className="min-w-[100%] mt-[5px] border-b-[2px] border-[pink] "></div>
-
-            <input
-              className="border-b-[2px] border-[#ddd] mt-[25px] w-[97%] max-w-[600px] px-[2px] text-[#676767] outline-none"
-              type="text"
-              onChange={setName((e) => e.target.value)}
-              value={name}
-              id=""
-              placeholder="Ex. Arihant Kamde"
-            />
-            <input
-              className="border-b-[2px] text-[#676767] border-[#ddd] mt-[25px] w-[97%] px-[2px] max-w-[600px] placeholder:text-[#] outline-none"
-              type="text"
-              onChange={setEmail((e) => e.target.value)}
-              value={email}
-              id=""
-              placeholder="Ex. kamdearihant@gmail.com"
-            />
-            <textarea
-              className="outline-none text-[#676767] mt-[25px] p-[2px] border-[2px] min-h-[150px] max-h-[150px] w-[97%] max-w-[600px]"
-              onChange={setMessage((e) => e.target.value)}
-              value={message}
-              placeholder="Ex. Hi Arihant! you are the best React Js Developer."
-            ></textarea>
-            <div className="mt-[30px] [&>button]:uppercase [&>button]:font-bold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px] ">
-              <button
-                onClick={sendMessage}
-                className="bg-[pink] w-[200px] text-[#333]"
-              >
-                Send Message
-              </button>
-            </div>
+            <form ref={form} onSubmit={sendMessage}>
+              <input
+                className="border-b-[2px] border-[#ddd] mt-[25px] w-[97%] max-w-[600px] px-[2px] text-[#676767] outline-none"
+                type="text"
+                name="from_name"
+                required
+                placeholder="Ex. Arihant Kamde"
+              />
+              <input
+                className="border-b-[2px] text-[#676767] border-[#ddd] mt-[25px] w-[97%] px-[2px] max-w-[600px] placeholder:text-[#] outline-none"
+                type="email"
+                name="reply_to"
+                required
+                placeholder="Ex. kamdearihant@gmail.com"
+              />
+              <textarea
+                className="outline-none text-[#676767] mt-[25px] p-[2px] border-[2px] min-h-[150px] max-h-[150px] w-[97%] max-w-[600px]"
+                name="message"
+                placeholder="Ex. Hi Arihant! you are the best React Js Developer."
+                required
+              ></textarea>
+              <div className="mt-[30px] [&>button]:uppercase [&>button]:font-bold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex justify-center  gap-[20px] ">
+                <button
+                  type="submit"
+                  disabled={formSubmit}
+                  value="Send"
+                  className={`bg-[pink] hover:bg-[#ff7d92] transition w-[250px] text-[#333] ${
+                    formSubmit
+                      ? "bg-[#ff7d92] transition"
+                      : "bg-[pink] transition"
+                  }`}
+                >
+                  {formSubmit ? "Sending Message" : "Send Message"}
+                </button>
+              </div>
+            </form>
           </div>
           <div className="mt-[30px] flex flex-col-reverse   gap-[20px]  md:flex-row md:items-center md:gap-[200px]">
             <p className="text-sm font-light">
