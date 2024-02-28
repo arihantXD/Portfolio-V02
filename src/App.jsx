@@ -8,6 +8,7 @@ import { DiMongodb } from "react-icons/di";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 import "./App.css";
 import { useState } from "react";
@@ -220,7 +221,13 @@ function App() {
       </div>
 
       {/* projects section !!!edit  */}
-      <div className="px-[20px] mt-[130px] md:mt-[70px]">
+      <div
+        className={`${
+          !front && !back
+            ? "px-[20px] mt-[140px] md:mt-[30px]"
+            : "px-[20px] mt-[30px]"
+        }`}
+      >
         <div className="[&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>My Projects</h1>
         </div>
@@ -233,9 +240,15 @@ function App() {
               non veniam aspernatur laudantium minus provident distinctio.
             </p>
             <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
-              <button className="bgColor">Go Live </button>
+              <button className="bgColor">
+                <a target="blank" href="https://jobify-sdkn.onrender.com/">
+                  Go Live
+                </a>
+              </button>
               <button className="border-black border-[2px] ">
-                Git Hub Link
+                <a target="blank" href="https://github.com/arihantXD/Jobify">
+                  Git Hub Link
+                </a>
               </button>
             </div>
           </div>
@@ -256,9 +269,15 @@ function App() {
               non veniam aspernatur laudantium minus provident distinctio.
             </p>
             <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
-              <button className="bgColor">Go Live </button>
+              <button className="bgColor">
+                <a target="blank" href="https://gen-z-five.vercel.app/">
+                  Go Live
+                </a>
+              </button>
               <button className="border-black border-[2px] ">
-                Git Hub Link
+                <a target="blank" href="https://github.com/arihantXD/GenZ">
+                  Git HUb link
+                </a>
               </button>
             </div>
           </div>
@@ -279,9 +298,18 @@ function App() {
               non veniam aspernatur laudantium minus provident distinctio.
             </p>
             <div className="mt-[40px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
-              <button className="bgColor">Go Live </button>
+              <button className="bgColor">
+                <a target="blank" href="https://caffe-zilla.vercel.app/">
+                  Go Live
+                </a>
+              </button>
               <button className="border-black border-[2px] ">
-                Git Hub Link
+                <a
+                  target="blank"
+                  href="https://github.com/arihantXD/CaffeZilla"
+                >
+                  Git hub link
+                </a>
               </button>
             </div>
           </div>
@@ -301,11 +329,13 @@ function App() {
             <h1 className="">Weather.io 2.0</h1>
             <div className="sm:flex sm:flex-row-reverse text-sm md:text-base gap-[10px] md:flex-col ">
               <div>
-                <img
-                  src="/weather.png"
-                  alt=""
-                  className="mt-[20px] sm:max-w-[200px] sm:min-h-[130px] md:min-w-[100%] mx-auto"
-                />
+                <a target="blank" href="https://weather-io2.vercel.app/">
+                  <img
+                    src="/weather.png"
+                    alt=""
+                    className="mt-[20px] sm:max-w-[200px] sm:min-h-[130px] md:min-w-[100%] mx-auto"
+                  />
+                </a>
               </div>
               <p className="mt-[20px]">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
@@ -318,11 +348,13 @@ function App() {
             <h1 className="">Weather.io 1.0</h1>
             <div className="sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col">
               <div>
-                <img
-                  src="/weatherOld.png"
-                  alt=""
-                  className="mt-[20px] sm:max-w-[200px] sm:min-h-[130px] md:min-w-[100%] mx-auto"
-                />
+                <a target="blank" href="https://weather-io-kappa.vercel.app/">
+                  <img
+                    src="/weatherOld.png"
+                    alt=""
+                    className="mt-[20px] sm:max-w-[200px] sm:min-h-[130px] md:min-w-[100%] mx-auto"
+                  />
+                </a>
               </div>
               <p className="mt-[20px]">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
@@ -335,11 +367,16 @@ function App() {
             <h1 className="">Portfolio 1.0</h1>
             <div className="sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col">
               <div>
-                <img
-                  src="/portfolio.png"
-                  alt=""
-                  className="mt-[20px] sm:max-w-[200px] sm:min-h-[130px] md:min-w-[100%] mx-auto"
-                />
+                <a
+                  target="blank"
+                  href="https://portfolio-website-olive-rho.vercel.app/"
+                >
+                  <img
+                    src="/portfolio.png"
+                    alt=""
+                    className="mt-[20px] sm:max-w-[200px] sm:min-h-[130px] md:min-w-[100%] mx-auto"
+                  />
+                </a>
               </div>
               <p className="mt-[20px]">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
