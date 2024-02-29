@@ -49,7 +49,7 @@ function App() {
       );
     toast.promise(result, {
       loading: "Sending the message.",
-      success: "Arihant got it ✅.",
+      success: "Hi, I got it. I'll reach out soon ✅.",
       error: "Message not sent.",
     });
   };
@@ -100,7 +100,7 @@ function App() {
           </p>
           <div className="mt-[70px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
             <button className="bgColor">
-              <a href="/resume.docx">Download Project</a>
+              <a href="/resume.docx">Download Resume</a>
             </button>
             <button className="border-black border-[2px] ">
               <a href="#projects">view all work</a>
