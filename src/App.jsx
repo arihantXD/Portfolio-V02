@@ -309,12 +309,12 @@ function App() {
 
             <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
               <button className="bgColor">
-                <a target="blank" href="https://jobify-sdkn.onrender.com/">
+                <a target="_blank" href="https://jobify-sdkn.onrender.com/">
                   Go Live
                 </a>
               </button>
               <button className="border-black border-[2px] ">
-                <a target="blank" href="https://github.com/arihantXD/Jobify">
+                <a target="_blank" href="https://github.com/arihantXD/Jobify">
                   Git Hub Link
                 </a>
               </button>
@@ -343,12 +343,12 @@ function App() {
             </p>
             <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
               <button className="bgColor">
-                <a target="blank" href="https://gen-z-five.vercel.app/">
+                <a target="_blank" href="https://gen-z-five.vercel.app/">
                   Go Live
                 </a>
               </button>
               <button className="border-black border-[2px] ">
-                <a target="blank" href="https://github.com/arihantXD/GenZ">
+                <a target="_blank" href="https://github.com/arihantXD/GenZ">
                   Git HUb link
                 </a>
               </button>
@@ -376,13 +376,13 @@ function App() {
             </p>
             <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
               <button className="bgColor">
-                <a target="blank" href="https://caffe-zilla.vercel.app/">
+                <a target="_blank" href="https://caffe-zilla.vercel.app/">
                   Go Live
                 </a>
               </button>
               <button className="border-black border-[2px] ">
                 <a
-                  target="blank"
+                  target="_blank"
                   href="https://github.com/arihantXD/CaffeZilla"
                 >
                   Git hub link
@@ -406,7 +406,7 @@ function App() {
             <h1 className="">Weather.io 2.0</h1>
             <div className="sm:flex sm:flex-row-reverse text-sm md:text-base gap-[10px] md:flex-col ">
               <div>
-                <a target="blank" href="https://weather-io2.vercel.app/">
+                <a target="_blank" href="https://weather-io2.vercel.app/">
                   <img
                     src="/weather.png"
                     alt=""
@@ -426,7 +426,7 @@ function App() {
             <h1 className="">Weather.io 1.0</h1>
             <div className=" sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col">
               <div>
-                <a target="blank" href="https://weather-io-kappa.vercel.app/">
+                <a target="_blank" href="https://weather-io-kappa.vercel.app/">
                   <img
                     src="/weatherOld.png"
                     alt=""
@@ -446,7 +446,7 @@ function App() {
             <div className="sm:flex sm:flex-row-reverse sm:text-sm gap-[10px] md:flex-col">
               <div>
                 <a
-                  target="blank"
+                  target="_blank"
                   href="https://portfolio-website-olive-rho.vercel.app/"
                 >
                   <img
@@ -554,7 +554,7 @@ function App() {
               friendly chat. Thanks for stopping by!
             </p>
             <div className="flex gap-[20px] mt-[10px]">
-              <a target="blank" href="https://www.facebook.com/01arihant/">
+              <a target="_blank" href="https://www.facebook.com/01arihant/">
                 <FaFacebookF
                   size={35}
                   className="rounded-full border-[2px] border-[pink] p-[10px]"
@@ -562,7 +562,7 @@ function App() {
               </a>
 
               <a
-                target="blank"
+                target="_blank"
                 href="https://www.linkedin.com/in/arihant-kamde-2976451b5/"
               >
                 <FaLinkedinIn
@@ -570,7 +570,7 @@ function App() {
                   className="rounded-full border-[2px] border-[pink] p-[10px]"
                 />
               </a>
-              <a target="blank" href="https://www.instagram.com/arihant0.1/">
+              <a target="_blank" href="https://www.instagram.com/arihant0.1/">
                 <FaInstagram
                   size={35}
                   className="rounded-full border-[2px] border-[pink] p-[10px]"
