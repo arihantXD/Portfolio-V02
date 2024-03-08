@@ -280,6 +280,18 @@ function App() {
       >
         <div className="[&>h1]:text-3xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
           <h1>My Projects</h1>
+          <span className="text-lg md:text-2xl">
+            <b>
+              Note
+              <span className="text-red-500">
+                <sup>*</sup>
+              </span>{" "}
+              -{" "}
+            </b>
+            <span className="text-[#636161]">
+              Projects might initially take 1 -2 minutes to load so please wait.
+            </span>
+          </span>
         </div>
         <div className="mt-[50px] w-[90%] md:w-[85%] mx-auto flex flex-col-reverse md:flex-row md:gap-[20px] md:justify-around">
           <div className="mt-[30px] [&>h1]:text-2xl lg:[&>h1]:text-5xl [&>h1]:leading-relaxed lg:[&>h1]:leading-[70px] [&>h1]:font-semibold">
@@ -290,7 +302,11 @@ function App() {
               - tech, and classify job type, making it easy to organize and
               monitor their job search progress, whether it's for full-time,
               part-time, or any other opportunity.
+              <br />
+              <b>Credentials : </b> Username - demo1@gmail.com, Password -
+              demo@123
             </p>
+
             <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
               <button className="bgColor">
                 <a target="blank" href="https://jobify-sdkn.onrender.com/">
@@ -321,6 +337,9 @@ function App() {
               and simulate the purchase process. GenZ offers a dummy flow from
               registration to purchase, providing a user-friendly experience for
               exploring and interacting with the project.
+              <br />
+              <b>Credentials : </b> Username - demo1@gmail.com, Password -
+              demo@123
             </p>
             <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
               <button className="bgColor">
@@ -352,9 +371,15 @@ function App() {
               photos. Enhancing the social aspect, users can track their
               location on an integrated map, allowing others to explore and
               contribute reviews for the cafes they've visited.
+              <br />
+              <b>Credentials : </b> Username - Dishant, Password - 1234
             </p>
             <div className="mt-[30px] [&>button]:uppercase [&>button]:font-semibold [&>button]:py-[12px] [&>button]:px-[25px] [&>button]:rounded-xl flex flex-col sm:flex-row gap-[20px]">
-              <button className="bgColor">Go Live </button>
+              <button className="bgColor">
+                <a target="blank" href="https://caffe-zilla.vercel.app/">
+                  Go Live
+                </a>
+              </button>
               <button className="border-black border-[2px] ">
                 <a
                   target="blank"
